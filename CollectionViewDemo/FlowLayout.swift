@@ -18,7 +18,8 @@ class FlowLayout: UICollectionViewLayout {
     let space: CGFloat = 2
     let columnsCount: CGFloat = 3
     var contentHeight: CGFloat = 0
-    
+    var isFall = true
+    var normalHeight:CGFloat = 40
     override func prepare() {
         self.layoutInfo.removeAll()
         self.contentHeight = 0
@@ -38,7 +39,7 @@ class FlowLayout: UICollectionViewLayout {
                 }
                 let x = self.space + CGFloat(column) * (self.space + width)
                 let y = currentY[column]
-                let height = self.delegate.heightFor(itemAtIndexPath: indexPath, withWidth: width)
+                let height = self.isFall ?  self.delegate.heightFor(itemAtIndexPath: indexPath, withWidth: width) : self.normalHeight
                 attribute.frame = CGRect(x: x, y: y, width: width, height: height)
                 self.layoutInfo[indexPath] = attribute
                 currentY[column] += height + self.space

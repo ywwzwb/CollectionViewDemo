@@ -22,6 +22,19 @@ class FlowCollectionViewController: UICollectionViewController {
         
         // Do any additional setup after loading the view.
     }
+    @IBAction func fallNormalSwitch(_ sender: UINavigationItem) {
+        let layout = FlowLayout()
+        layout.delegate = self
+        let flowLayout = self.collectionView?.collectionViewLayout as! FlowLayout
+        if flowLayout.isFall {
+            layout.isFall = false
+            sender.title = "瀑布"
+        } else {
+            layout.isFall = true
+            sender.title = "普通"
+        }
+        self.collectionView?.setCollectionViewLayout(layout, animated: true)
+    }
     @IBAction func refreshClicked(_ sender: Any) {
         self.reload()
         self.collectionView?.reloadData()

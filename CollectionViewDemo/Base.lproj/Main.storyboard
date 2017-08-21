@@ -62,11 +62,18 @@
                                 </connections>
                             </barButtonItem>
                         </leftBarButtonItems>
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="iGJ-gg-7Xa">
-                            <connections>
-                                <action selector="refreshClicked:" destination="vjg-Rn-Vqr" id="d53-GX-Asy"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="refresh" id="iGJ-gg-7Xa">
+                                <connections>
+                                    <action selector="refreshClicked:" destination="vjg-Rn-Vqr" id="d53-GX-Asy"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="普通" id="KFr-kx-y4p">
+                                <connections>
+                                    <action selector="fallNormalSwitch:" destination="vjg-Rn-Vqr" id="GXq-2O-63k"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9T6-qW-RhV" userLabel="First Responder" sceneMemberID="firstResponder"/>
