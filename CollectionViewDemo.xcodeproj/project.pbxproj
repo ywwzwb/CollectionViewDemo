@@ -14,6 +14,7 @@
 		258228271F4A75E800929D5C /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258228261F4A75E800929D5C /* FlowLayout.swift */; };
 		258228291F4A760800929D5C /* SimpleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258228281F4A760800929D5C /* SimpleCollectionViewCell.swift */; };
 		2582282B1F4A766A00929D5C /* FlowCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2582282A1F4A766A00929D5C /* FlowCollectionViewController.swift */; };
+		2582282D1F4AB29000929D5C /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2582282C1F4AB29000929D5C /* UIColor+Random.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		258228261F4A75E800929D5C /* FlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
 		258228281F4A760800929D5C /* SimpleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewCell.swift; sourceTree = "<group>"; };
 		2582282A1F4A766A00929D5C /* FlowCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowCollectionViewController.swift; sourceTree = "<group>"; };
+		2582282C1F4AB29000929D5C /* UIColor+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				258228261F4A75E800929D5C /* FlowLayout.swift */,
 				258228281F4A760800929D5C /* SimpleCollectionViewCell.swift */,
 				2582282A1F4A766A00929D5C /* FlowCollectionViewController.swift */,
+				2582282C1F4AB29000929D5C /* UIColor+Random.swift */,
 			);
 			path = CollectionViewDemo;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2582282D1F4AB29000929D5C /* UIColor+Random.swift in Sources */,
 				2582282B1F4A766A00929D5C /* FlowCollectionViewController.swift in Sources */,
 				258228291F4A760800929D5C /* SimpleCollectionViewCell.swift in Sources */,
 				258228151F4A757C00929D5C /* AppDelegate.swift in Sources */,
@@ -307,6 +311,7 @@
 				258228251F4A757C00929D5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

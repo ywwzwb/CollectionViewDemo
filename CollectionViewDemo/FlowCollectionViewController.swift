@@ -12,16 +12,14 @@ import UIKit
 class FlowCollectionViewController: UICollectionViewController {
     
     var cellHeight:[CGFloat]!
-    
+    var cellBackgroundColor:[UIColor]!
+    let cellCount = 100
     override func viewDidLoad() {
         super.viewDidLoad()
         self.reload()
         let flowLayout = self.collectionView?.collectionViewLayout as! FlowLayout
         flowLayout.delegate = self
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-//        self.collectionView?.register(SimpleCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-
+        
         // Do any additional setup after loading the view.
     }
     @IBAction func refreshClicked(_ sender: Any) {
@@ -31,32 +29,33 @@ class FlowCollectionViewController: UICollectionViewController {
     func reload() {
         self.cellHeight = {
             var heights = [CGFloat]()
-            for _ in 0 ..< 100 {
-                heights.append(CGFloat(arc4random_uniform(200) + 20))
+            for _ in 0 ..< self.cellCount {
+                heights.append(CGFloat(arc4random_uniform(200) + 20))//
             }
             return heights
+        }()
+        self.cellBackgroundColor = {
+            var colors = [UIColor]()
+            for _ in 0 ..< self.cellCount {
+                colors.append(UIColor.randomColor())
+            }
+            return colors
         }()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-
+}
+// MARK: UICollectionViewDataSource
+extension FlowCollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 100
+        return self.cellCount
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SimpleCollectionViewCell
-        cell.label.text = "\(indexPath.section), \(indexPath.row)"
+        cell.label.text = "\(indexPath.row)"
+        cell.contentView.backgroundColor = self.cellBackgroundColor[indexPath.row]
         return cell
     }
 }

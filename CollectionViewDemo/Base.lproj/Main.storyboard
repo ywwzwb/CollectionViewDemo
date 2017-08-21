@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--流式布局-->
+        <!--Flow-->
         <scene sceneID="lAk-su-7hV">
             <objects>
                 <collectionViewController id="vjg-Rn-Vqr" customClass="FlowCollectionViewController" customModule="CollectionViewDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,12 +26,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k43-WG-rUa">
-                                            <rect key="frame" x="1" y="1" width="48" height="48"/>
-                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1, 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBR-X6-UUO">
-                                            <rect key="frame" x="12" y="15" width="26.5" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBR-X6-UUO">
+                                            <rect key="frame" x="21.5" y="15" width="8" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -39,12 +35,8 @@
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="k43-WG-rUa" firstAttribute="centerX" secondItem="ApR-Qq-6h5" secondAttribute="centerX" id="0OE-GH-Aaj"/>
                                     <constraint firstItem="rBR-X6-UUO" firstAttribute="centerX" secondItem="ApR-Qq-6h5" secondAttribute="centerX" id="1Hl-6F-OPW"/>
-                                    <constraint firstItem="k43-WG-rUa" firstAttribute="width" secondItem="ApR-Qq-6h5" secondAttribute="width" constant="-2" id="4rV-Y7-4Dw"/>
                                     <constraint firstItem="rBR-X6-UUO" firstAttribute="centerY" secondItem="ApR-Qq-6h5" secondAttribute="centerY" id="9YJ-9z-SCi"/>
-                                    <constraint firstItem="k43-WG-rUa" firstAttribute="centerY" secondItem="ApR-Qq-6h5" secondAttribute="centerY" id="GR5-gP-Jb2"/>
-                                    <constraint firstItem="k43-WG-rUa" firstAttribute="height" secondItem="ApR-Qq-6h5" secondAttribute="height" constant="-2" id="Hwi-Gt-FIy"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="label" destination="rBR-X6-UUO" id="seE-S1-bIY"/>
@@ -56,7 +48,7 @@
                             <outlet property="delegate" destination="vjg-Rn-Vqr" id="lXL-4M-HCm"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="流式布局" id="6Ap-gs-olJ">
+                    <navigationItem key="navigationItem" title="Flow" id="6Ap-gs-olJ">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="iGJ-gg-7Xa">
                             <connections>
                                 <action selector="refreshClicked:" destination="vjg-Rn-Vqr" id="d53-GX-Asy"/>
