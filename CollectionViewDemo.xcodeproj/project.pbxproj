@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		258228151F4A757C00929D5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258228141F4A757C00929D5C /* AppDelegate.swift */; };
-		258228171F4A757C00929D5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258228161F4A757C00929D5C /* ViewController.swift */; };
 		2582281A1F4A757C00929D5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 258228181F4A757C00929D5C /* Main.storyboard */; };
 		2582281C1F4A757C00929D5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2582281B1F4A757C00929D5C /* Assets.xcassets */; };
 		2582281F1F4A757C00929D5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2582281D1F4A757C00929D5C /* LaunchScreen.storyboard */; };
+		258228271F4A75E800929D5C /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258228261F4A75E800929D5C /* FlowLayout.swift */; };
+		258228291F4A760800929D5C /* SimpleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258228281F4A760800929D5C /* SimpleCollectionViewCell.swift */; };
+		2582282B1F4A766A00929D5C /* FlowCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2582282A1F4A766A00929D5C /* FlowCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		258228111F4A757C00929D5C /* CollectionViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		258228141F4A757C00929D5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		258228161F4A757C00929D5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		258228191F4A757C00929D5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2582281B1F4A757C00929D5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2582281E1F4A757C00929D5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		258228201F4A757C00929D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		258228261F4A75E800929D5C /* FlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
+		258228281F4A760800929D5C /* SimpleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewCell.swift; sourceTree = "<group>"; };
+		2582282A1F4A766A00929D5C /* FlowCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				258228141F4A757C00929D5C /* AppDelegate.swift */,
-				258228161F4A757C00929D5C /* ViewController.swift */,
 				258228181F4A757C00929D5C /* Main.storyboard */,
 				2582281B1F4A757C00929D5C /* Assets.xcassets */,
 				2582281D1F4A757C00929D5C /* LaunchScreen.storyboard */,
 				258228201F4A757C00929D5C /* Info.plist */,
+				258228261F4A75E800929D5C /* FlowLayout.swift */,
+				258228281F4A760800929D5C /* SimpleCollectionViewCell.swift */,
+				2582282A1F4A766A00929D5C /* FlowCollectionViewController.swift */,
 			);
 			path = CollectionViewDemo;
 			sourceTree = "<group>";
@@ -136,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				258228171F4A757C00929D5C /* ViewController.swift in Sources */,
+				2582282B1F4A766A00929D5C /* FlowCollectionViewController.swift in Sources */,
+				258228291F4A760800929D5C /* SimpleCollectionViewCell.swift in Sources */,
 				258228151F4A757C00929D5C /* AppDelegate.swift in Sources */,
+				258228271F4A75E800929D5C /* FlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
