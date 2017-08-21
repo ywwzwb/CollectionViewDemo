@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewLayout key="collectionViewLayout" id="pnK-SN-2Oa" customClass="FlowLayout" customModule="CollectionViewDemo" customModuleProvider="target"/>
+                        <collectionViewLayout key="collectionViewLayout" id="vil-Vj-nRA" customClass="FlowLayout" customModule="CollectionViewDemo" customModuleProvider="target"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="ApR-Qq-6h5" customClass="SimpleCollectionViewCell" customModule="CollectionViewDemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -49,6 +50,18 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Flow" id="6Ap-gs-olJ">
+                        <leftBarButtonItems>
+                            <barButtonItem title="Prepend" id="iBU-FD-rcx">
+                                <connections>
+                                    <action selector="prependClicked:" destination="vjg-Rn-Vqr" id="SQl-wl-9TS"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Append" id="JKn-jv-bt5">
+                                <connections>
+                                    <action selector="appendClicked:" destination="vjg-Rn-Vqr" id="r21-T5-FXm"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="iGJ-gg-7Xa">
                             <connections>
                                 <action selector="refreshClicked:" destination="vjg-Rn-Vqr" id="d53-GX-Asy"/>

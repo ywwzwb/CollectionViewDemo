@@ -26,6 +26,16 @@ class FlowCollectionViewController: UICollectionViewController {
         self.reload()
         self.collectionView?.reloadData()
     }
+    @IBAction func appendClicked(_ sender: Any) {
+        self.cellHeight.append(CGFloat(arc4random_uniform(200) + 20))
+        self.cellBackgroundColor.append(UIColor.randomColor())
+        self.collectionView?.insertItems(at: [IndexPath(item: self.cellHeight.count - 1, section: 0)])
+    }
+    @IBAction func prependClicked(_ sender: Any) {
+        self.cellHeight.insert(CGFloat(arc4random_uniform(200) + 20), at: 0)
+        self.cellBackgroundColor.insert(UIColor.randomColor(), at: 0)
+        self.collectionView?.insertItems(at: [IndexPath(item: 0, section: 0)])
+    }
     func reload() {
         self.cellHeight = {
             var heights = [CGFloat]()
@@ -49,18 +59,23 @@ class FlowCollectionViewController: UICollectionViewController {
 // MARK: UICollectionViewDataSource
 extension FlowCollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.cellCount
+        return self.cellHeight.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SimpleCollectionViewCell
-        cell.label.text = "\(indexPath.row)"
-        cell.contentView.backgroundColor = self.cellBackgroundColor[indexPath.row]
+        cell.label.text = "\(self.cellHeight[indexPath.item])"
+        cell.contentView.backgroundColor = self.cellBackgroundColor[indexPath.item]
         return cell
+    }
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.cellHeight.remove(at: indexPath.item)
+        self.cellBackgroundColor.remove(at: indexPath.item)
+        self.collectionView?.deleteItems(at: [indexPath])
     }
 }
 extension FlowCollectionViewController: FlowLayoutDelegate{
     func heightFor(itemAtIndexPath indexPath: IndexPath, withWidth: CGFloat) -> CGFloat {
-        return self.cellHeight[indexPath.row];
+        return self.cellHeight[indexPath.item];
     }
 }
